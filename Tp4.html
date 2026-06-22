@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 4 - Tableaux avancés</title>
+    <link rel="stylesheet" href="Tp4.css">
+</head>
+<body>
+<div class="page">
+
+    <div class="page-header">
+        <div class="numero">4</div>
+        <div>
+            <h1>Travaux Pratiques 4</h1>
+            <div class="sous">HTML · Tableaux et fusion de cellules</div>
+        </div>
+    </div>
+
+    <div class="carte">
+        <h2>Balises abordées</h2>
+        <span class="tag">&lt;table&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;th&gt;</span>
+        <span class="tag">&lt;td&gt;</span>
+        <span class="tag">colspan</span>
+        <span class="tag">rowspan</span>
+    </div>
+
+    <!-- TABLEAU N°1 — FOND BLANC AVEC EFFETS -->
+    <div class="carte">
+        <h2>Tableau n°1 — Facultés (avec effets CSS)</h2>
+        <table class="tableau-blanc">
+            <tr>
+                <!-- EPAC : horizontal + double bordure jaune -->
+                <td rowspan="3" class="td-epac">EPAC</td>
+                <!-- ENEAM : bleu + colspan -->
+                <td colspan="2" class="td-eneam">ENEAM</td>
+            </tr>
+            <tr>
+                <!-- Cellule IG : fond bleu ciel + texte incliné -->
+                <td class="cell-ig" rowspan="2">
+                    <span class="td-ig" >IG</span>
+                </td>
+                <!-- IA : clignote -->
+                <td><span class="td-ia">IA</span></td>
+            </tr>
+            <tr>
+                <td>Claude</td>
+            </tr>
+            <tr>
+                <!-- Flash : incliné vers la gauche -->
+                <td class="td-flash"><span>Flash</span></td>
+                <!-- Programmation : incliné vers la droite -->
+                <td colspan="2" class="td-programmation">
+                    <span>Programmation</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TABLEAU N°2 -->
+    <div class="carte">
+        <h2>Tableau n°2 — Annuaire</h2>
+        <table class="tableau-demo">
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Pays</th>
+            </tr>
+            <tr>
+                <td>Carmen</td>
+                <td>33 ans</td>
+                <td>Espagne</td>
+            </tr>
+            <tr>
+                <td>Michelle</td>
+                <td>26 ans</td>
+                <td>États-Unis</td>
+            </tr>
+            <tr>
+                <td>Yanis</td>
+                <td>18 ans</td>
+                <td class="or">Bénin 🇧🇯</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TABLEAU N°3 -->
+    <div class="carte">
+        <h2>Tableau n°3 — Emploi du temps IG1-A</h2>
+        <table class="tableau-demo">
+            <tr>
+                <th>Heure</th>
+                <th>Lundi</th>
+                <th>Mardi</th>
+                <th>Mercredi</th>
+            </tr>
+            <tr>
+                <td class="or">08h–10h</td>
+                <td>Mathématiques</td>
+                <td class="bleu">Web Design</td>
+                <td>Comptabilité</td>
+            </tr>
+            <tr>
+                <td class="or">10h–12h</td>
+                <td class="bleu">Linux</td>
+                <td>ATO</td>
+                <td>Mathématiques</td>
+            </tr>
+            <tr>
+                <td class="or">14h–16h</td>
+                <td colspan="2" class="vert">TP Informatique</td>
+                <td>Anglais</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TABLEAU N°4 -->
+    <div class="carte">
+        <h2>Tableau n°4 — Notes IG1-A</h2>
+        <table class="tableau-demo">
+            <tr>
+                <th>Matière</th>
+                <th>Note /20</th>
+                <th>Coeff</th>
+                <th>Appréciation</th>
+            </tr>
+            <tr>
+                <td>Web Design</td>
+                <td class="or">17</td>
+                <td>2</td>
+                <td class="vert">Très Bien</td>
+            </tr>
+            <tr>
+                <td>Linux</td>
+                <td class="or">16</td>
+                <td>2</td>
+                <td class="vert">Très Bien</td>
+            </tr>
+            <tr>
+                <td>ATO</td>
+                <td>15</td>
+                <td>2</td>
+                <td>Bien</td>
+            </tr>
+            <tr>
+                <td>Mathématiques</td>
+                <td class="or">18</td>
+                <td>3</td>
+                <td class="vert">Excellent</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="or">Moyenne générale</td>
+                <td colspan="2" class="vert">16.5 / 20</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="carte">
+        <h2>Ce que j'ai appris</h2>
+        <ul style="list-style:none; padding:0;">
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                ✅ Fusionner des colonnes avec <code style="color:#c8a84b">colspan</code>
+            </li>
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                ✅ Fusionner des lignes avec <code style="color:#c8a84b">rowspan</code>
+            </li>
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                ✅ Incliner du texte avec <code style="color:#c8a84b">transform: rotate()</code>
+            </li>
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                ✅ Animer du texte avec <code style="color:#c8a84b">@keyframes clignoter</code>
+            </li>
+            <li style="padding:8px 0; color:#b0c4de; font-size:13px;">
+                ✅ Bordure double avec <code style="color:#c8a84b">border: double</code>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 25px 20px;
+            color: #e0e8f5;
+        }
+        .page { max-width: 800px; margin: 0 auto; }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(200,168,75,0.3);
+        }
+        .icone-page {
+            background: linear-gradient(135deg, #c8a84b, #f0d080);
+            color: #1a1a2e;
+            font-size: 26px;
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .page-header h1 { font-size: 20px; color: #fff; }
+        .page-header .sous { font-size: 11px; color: #c8a84b; margin-top: 3px; }
+
+        .carte {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,168,75,0.2);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+            overflow-x: auto;
+        }
+        .carte h2 {
+            font-size: 13px;
+            color: #c8a84b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .carte h2::before {
+            content: '';
+            width: 3px; height: 16px;
+            background: #c8a84b;
+            border-radius: 2px;
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            color: #c8a84b;
+            padding: 12px 16px;
+            text-align: center;
+            border: 1px solid rgba(200,168,75,0.3);
+            font-size: 12px;
+        }
+
+        td {
+            padding: 10px 16px;
+            border: 1px solid rgba(200,168,75,0.15);
+            color: #b0c4de;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+        }
+
+        tr:hover td { background: rgba(200,168,75,0.08); color: #e0e8f5; }
+        .bleu { background: rgba(91,163,245,0.15) !important; color: #5ba3f5 !important; }
+        .or { background: rgba(200,168,75,0.15) !important; color: #c8a84b !important; }
+        .vert { background: rgba(100,200,100,0.15) !important; color: #90ee90 !important; }

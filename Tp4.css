@@ -1,0 +1,203 @@
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 25px 20px;
+            color: #e0e8f5;
+        }
+
+        .page { max-width: 800px; margin: 0 auto; }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(200,168,75,0.3);
+        }
+
+        .numero {
+            background: linear-gradient(135deg, #c8a84b, #f0d080);
+            color: #1a1a2e;
+            font-size: 22px;
+            font-weight: 900;
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .page-header h1 { font-size: 20px; color: #fff; }
+        .page-header .sous { font-size: 11px; color: #c8a84b; margin-top: 3px; }
+
+        .carte {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,168,75,0.2);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+            overflow-x: auto;
+        }
+
+        .carte h2 {
+            font-size: 13px;
+            color: #c8a84b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .carte h2::before {
+            content: '';
+            width: 3px; height: 16px;
+            background: #c8a84b;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* =============================================
+           TABLEAU N°1 — FOND BLANC
+           ============================================= */
+        .tableau-blanc {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            background: #ffffff;
+        }
+
+        .tableau-blanc td,
+        .tableau-blanc th {
+            border: 2px solid #333;
+            padding: 14px 18px;
+            text-align: center;
+            color: #000000;
+            background: #ffffff;
+        }
+
+        /* EPAC — horizontal + double bordure jaune */
+        .td-epac {
+            font-weight: bold;
+            font-size: 15px;
+            color: #000000 !important;
+            background: #ffffff !important;
+            border: 4px double #FFD700 !important;
+            writing-mode: vertical-rl !important;
+            letter-spacing: 2px;
+            transform: rotate(180deg)
+        }
+
+        /* ENEAM — bleu */
+        .td-eneam {
+            color: #0000FF !important;
+            font-weight: bold;
+            font-size: 16px;
+            background: #ffffff !important;
+        }
+
+        /* IG — incliné + fond bleu ciel */
+        .td-ig {
+            background: #87CEEB !important;
+            color: #000000 !important;
+            font-weight: bold;
+            transform: rotate(-15deg);
+            display: inline-block;
+        }
+
+        /* Cellule contenant IG */
+        .cell-ig {
+            background: #87CEEB !important;
+            overflow: visible;
+        }
+
+        /* IA — clignote */
+        @keyframes clignoter {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        .td-ia {
+            animation: clignoter 1s infinite;
+            color: #333 !important;
+            background: #ffffff !important;
+            font-style: italic;
+        }
+
+        /* Flash — incliné vers la gauche */
+        .td-flash {
+            font-weight: bold;
+            color: #000000 !important;
+            background: #ffffff !important;
+        }
+
+        .td-flash span {
+            display: inline-block;
+            transform: rotate(-20deg);
+        }
+
+        /* Programmation — incliné vers la droite (sens contraire de Flash) */
+        .td-programmation {
+            font-weight: bold;
+            color: #000000 !important;
+            background: #ffffff !important;
+        }
+
+        .td-programmation span {
+            display: inline-block;
+            transform: rotate(20deg);
+        }
+
+        /* =============================================
+           TABLEAUX SUIVANTS — STYLE SOMBRE
+           ============================================= */
+        .tableau-demo {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        .tableau-demo th {
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            color: #c8a84b;
+            padding: 12px 16px;
+            text-align: center;
+            border: 1px solid rgba(200,168,75,0.3);
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .tableau-demo td {
+            padding: 10px 16px;
+            border: 1px solid rgba(200,168,75,0.15);
+            color: #b0c4de;
+            text-align: center;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .tableau-demo tr:hover td {
+            background: rgba(200,168,75,0.08);
+            color: #e0e8f5;
+        }
+
+        .or  { background: rgba(200,168,75,0.15) !important; color: #c8a84b !important; }
+        .vert { background: rgba(100,200,100,0.15) !important; color: #90ee90 !important; }
+        .bleu { background: rgba(91,163,245,0.15) !important; color: #5ba3f5 !important; }
+
+        .tag {
+            display: inline-block;
+            background: rgba(200,168,75,0.15);
+            border: 1px solid rgba(200,168,75,0.3);
+            color: #c8a84b;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin: 3px;
+            font-family: monospace;
+        }

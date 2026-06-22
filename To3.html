@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3 - Liens et Images</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 25px 20px;
+            color: #e0e8f5;
+        }
+        .page { max-width: 800px; margin: 0 auto; }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(200,168,75,0.3);
+        }
+        .numero {
+            background: linear-gradient(135deg, #c8a84b, #f0d080);
+            color: #1a1a2e;
+            font-size: 22px;
+            font-weight: 900;
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .page-header h1 { font-size: 20px; color: #fff; }
+        .page-header .sous { font-size: 11px; color: #c8a84b; margin-top: 3px; }
+
+        .carte {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,168,75,0.2);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+        .carte h2 {
+            font-size: 13px;
+            color: #c8a84b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .carte h2::before {
+            content: '';
+            width: 3px; height: 16px;
+            background: #c8a84b;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* Liens démo */
+        .demo-liens {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .lien-item {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(200,168,75,0.15);
+            border-radius: 8px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .lien-type {
+            font-size: 10px;
+            background: rgba(200,168,75,0.2);
+            color: #c8a84b;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            min-width: 90px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .lien-item a {
+            color: #5ba3f5;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+
+        .lien-item a:hover { color: #c8a84b; }
+
+        .lien-item .desc {
+            font-size: 12px;
+            color: #7a90aa;
+            margin-top: 3px;
+        }
+
+        /* Images démo */
+        .demo-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .img-demo {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(200,168,75,0.15);
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .img-demo .placeholder {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .img-demo p {
+            font-size: 11px;
+            color: #7a90aa;
+        }
+
+        .img-demo .attribut {
+            font-size: 10px;
+            color: #c8a84b;
+            font-family: monospace;
+            margin-top: 6px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(200,168,75,0.15);
+            border: 1px solid rgba(200,168,75,0.3);
+            color: #c8a84b;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin: 3px;
+            font-family: monospace;
+        }
+
+        @media (max-width: 500px) {
+            .demo-images { grid-template-columns: 1fr; }
+        }
+        table{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+td{
+  border: 1px solid black;
+}
+
+.lien-angle img {
+    width: 60px;
+    height: auto;      
+    border-radius: 5px;
+}
+#logo-uac {
+    left: 15px;    
+}
+
+#logo-eneam {
+    right: 15px;
+}
+body {
+  padding-top: 90px;
+}
+h2{
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="page-header">
+        <div class="numero">3</div>
+        <div>
+            <h1>Travaux Pratiques 3</h1>
+            <div class="sous">HTML · Hyperliens et Images</div>
+        </div>
+    </div>
+
+    <div class="carte">
+        <h2>Balises abordées</h2>
+        <span class="tag">&lt;a href&gt;</span>
+        <span class="tag">&lt;img src&gt;</span>
+        <span class="tag">target</span>
+        <span class="tag">alt</span>
+        <span class="tag">width / height</span>
+    </div>
+
+    <div class="carte">
+        <h2>Types de liens</h2>
+        <div class="demo-liens">
+            <div class="lien-item">
+                <div>
+                    <div class="lien-type">Externe</div>
+                </div>
+                <div>
+                    <a href="https://www.uac.bj" target="_blank">www.uac.bj</a>
+                    <div class="desc">S'ouvre dans un nouvel onglet · <code style="color:#c8a84b">target="_blank"</code></div>
+                </div>
+            </div>
+            <div class="lien-item">
+                <div>
+                    <div class="lien-type">Interne</div>
+                </div>
+                <div>
+                    <a href="accueil.html" target="contenu">Accueil du site</a>
+                    <div class="desc">Navigue dans la même frame · <code style="color:#c8a84b">target="contenu"</code></div>
+                </div>
+            </div>
+            <div class="lien-item">
+                <div>
+                    <div class="lien-type">Email</div>
+                </div>
+                <div>
+                    <a href="mailto:yanis@email.com">yanis@email.com</a>
+                    <div class="desc">Ouvre le client mail · <code style="color:#c8a84b">href="mailto:..."</code></div>
+                </div>
+            </div>
+            <div class="lien-item">
+                <div>
+                    <div class="lien-type">Ancre</div>
+                </div>
+                <div>
+                    <a href="#haut">Retour en haut</a>
+                    <div class="desc">Navigue dans la même page · <code style="color:#c8a84b">href="#id"</code></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carte">
+        <h2>Utilisation des images</h2>
+        <div class="demo-images">
+            <div class="img-demo">
+                <span class="placeholder">🖼️</span>
+                <p>Image avec taille définie</p>
+                <div class="attribut">width="200" height="150"</div>
+            </div>
+            <div class="img-demo">
+                <span class="placeholder">🔗</span>
+                <p>Image cliquable (lien)</p>
+                <div class="attribut">&lt;a&gt;&lt;img&gt;&lt;/a&gt;</div>
+            </div>
+            <div class="img-demo">
+                <span class="placeholder">📐</span>
+                <p>Image redimensionnée en %</p>
+                <div class="attribut">width="50%"</div>
+            </div>
+            <div class="img-demo">
+                <span class="placeholder">♿</span>
+                <p>Texte alternatif</p>
+                <div class="attribut">alt="description"</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="carte">
+        <h2>Ce que j'ai appris</h2>
+        <ul style="list-style:none; padding:0;">
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                Créer des liens internes et externes avec &lt;a href&gt;
+            </li>
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                 Ouvrir un lien dans un nouvel onglet avec target="_blank"
+            </li>
+            <li style="padding:8px 0; border-bottom:1px solid rgba(200,168,75,0.1); color:#b0c4de; font-size:13px;">
+                 Insérer une image avec src, alt, width, height
+            </li>
+            <li style="padding:8px 0; color:#b0c4de; font-size:13px;">
+                 Rendre une image cliquable en combinant &lt;a&gt; et &lt;img&gt;
+            </li>
+        </ul>
+    </div>
+    <div class="carte">
+      
+    <table>
+    <td><a href="https://www.uac.bj/" class="lien-angle" id="logo-uac">
+    <img src="uac.jpg" alt="Description">
+</a>
+
+    <td><h2>Bienvenue sur mon premier site web</h2></td>
+</td>
+    <td>
+<a href="https://eneam.uac.bj/" class="lien-angle" id="logo-eneam">
+    <img src="ENEAM.jpg" alt="">
+</a>
+</td>
+</table>
+    <h2>I- Informations personnelles</h2>
+    <ul>
+      <li><strong><a href="#ancre">Nom: </a> </strong>OGOUGBE</li>
+       <li><strong>Prénom: </strong> Yanis</li>
+       <li><strong>Âge: </strong>18 ans </li>
+       <li><strong>Num Tel: </strong>0192489149</li>
+       <li><strong><a href="Tp1.html">Photo: </a></strong></li>
+    </ul>
+    <h2>II- Mes diplômes</h2>
+    <ol>
+      <li>CEP</li>
+      <li>BEPC</li>
+      <li><a href="Tp2.html">BAC</a></li>
+    </ol>
+    <h2>III- Mes loisirs</h2>
+    <p id="ancre">
+      La théorie de l’information est une discipline scientifique qui étudie la manière dont l’information peut être représentée, mesurée, stockée et transmise. Cette théorie constitue l’un des fondements des communications numériques modernes.
+Avant le développement des systèmes numériques, les communications reposaient principalement sur des signaux analogiques sensibles au bruit et aux perturbations. L’apparition de l’informatique et des télécommunications numériques a nécessité la création de méthodes rigoureuses permettant de transmettre les données de manière efficace et fiable.
+La théorie de l’information fournit les outils mathématiques et conceptuels permettant d’analyser et résoudre ces problèmes.
+1. Histoire et importance de la théorie de l’information
+La théorie de l’information est une théorie probabiliste permettant de quantifier le contenu moyen en information d'un ensemble de messages, dont le codage informatique satisfait une distribution statistique précise. Elle est principalement associée aux travaux du mathématicien et ingénieur américain Claude Shannon.
+La théorie de l'information répond à deux questions fondamentales de la théorie de la communication : 1. Quelle est la compression ultime des données ?, 2. Quel est le taux de transmission ultime de la communication.
+En 1948, Shannon publia un article fondamental intitulé « A Mathematical Theory of Communication ». Cet article introduit les concepts essentiels de l’information numérique et pose les bases scientifiques des télécommunications modernes.
+    </p>
+    </div>
+
+</div>
+</body>
+</html>

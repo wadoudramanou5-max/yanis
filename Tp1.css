@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 1 - Bases HTML</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 25px 20px;
+            color: #e0e8f5;
+        }
+        .page { max-width: 800px; margin: 0 auto; }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(200,168,75,0.3);
+        }
+        .numero {
+            background: linear-gradient(135deg, #c8a84b, #f0d080);
+            color: #1a1a2e;
+            font-size: 22px;
+            font-weight: 900;
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .page-header h1 { font-size: 20px; color: #fff; }
+        .page-header .sous { font-size: 11px; color: #c8a84b; margin-top: 3px; }
+
+        .carte {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,168,75,0.2);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+        .carte h2 {
+            font-size: 13px;
+            color:#c8a84b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .carte h2::before {
+            content: '';
+            width: 3px; height: 16px;
+            background: #c8a84b;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* Contenu du TP */
+        .contenu-tp {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(200,168,75,0.15);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .contenu-tp h1 {
+            font-size: 26px;
+            color: #c8a84b;
+            margin-bottom: 16px;
+            border-bottom: 1px solid rgba(200,168,75,0.3);
+            padding-bottom: 10px;
+        }
+        .contenu-tp p {
+            font-size: 14px;
+            color: #b0c4de;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .contenu-tp strong { color: #ffffff; }
+        .contenu-tp em { color: #c8a84b; font-style: italic; }
+
+        .img-placeholder {
+            background: rgba(200,168,75,0.1);
+            border: 2px dashed rgba(200,168,75,0.4);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            color: #c8a84b;
+            font-size: 13px;
+            margin: 12px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(200,168,75,0.15);
+            border: 1px solid rgba(200,168,75,0.3);
+            color: #c8a84b;
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            margin: 3px;
+            font-family: monospace;

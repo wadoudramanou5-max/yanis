@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listes HTML</title>
+    <link rel="stylesheet" href="liste.css">
+</head>
+<body>
+<div class="page">
+
+    <div class="page-header">
+        <div class="icone-page">📋</div>
+        <div>
+            <h1>Les Listes HTML</h1>
+            
+        </div>
+    </div>
+
+    <!-- LISTES NON ORDONNÉES -->
+    <div class="carte">
+        <h2>Listes non ordonnées &lt;ul&gt;</h2>
+        <div class="grille-listes">
+            <div class="liste-demo">
+                <span class="type-label">disc (défaut)</span>
+                <ul style="list-style-type:disc">
+                    <li>Liste</li><li>à</li><li>puces</li>
+                </ul>
+            </div>
+            <div class="liste-demo">
+                <span class="type-label">circle</span>
+                <ul style="list-style-type:circle">
+                    <li>Liste</li><li>à</li><li>puces</li>
+                </ul>
+            </div>
+            <div class="liste-demo">
+                <span class="type-label">square</span>
+                <ul style="list-style-type:square">
+                    <li>Liste</li><li>à</li><li>puces</li>
+                </ul>
+            </div>
+            <div class="liste-demo">
+                <span class="type-label">none</span>
+                <ul style="list-style-type:none; padding-left:0;">
+                    <li>Liste</li><li>sans</li><li>puces</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- LISTES ORDONNÉES -->
+    <div class="carte">
+        <h2>Listes ordonnées &lt;ol&gt;</h2>
+        <div class="grille-listes">
+            <div class="liste-demo">
+                <span class="type-label">decimal (défaut)</span>
+                <ol style="list-style-type:decimal">
+                    <li>Un</li><li>Deux</li><li>Trois</li><li>Quatre</li>
+                </ol>
+            </div>
+            <div class="liste-demo">
+                <span class="type-label">lower-alpha</span>
+                <ol style="list-style-type:lower-alpha">
+                    <li>Un</li><li>Deux</li><li>Trois</li><li>Quatre</li>
+                </ol>
+            </div>
+            <div class="liste-demo">
+                <span class="type-label">upper-roman</span>
+                <ol style="list-style-type:upper-roman">
+                    <li>Un</li><li>Deux</li><li>Trois</li><li>Quatre</li>
+                </ol>
+            </div>
+            <div class="liste-demo">
+                <span class="type-label">lower-greek</span>
+                <ol style="list-style-type:lower-greek">
+                    <li>Un</li><li>Deux</li><li>Trois</li><li>Quatre</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- LISTE DE DÉFINITIONS -->
+    <div class="carte">
+        <h2>Liste de définitions &lt;dl&gt;</h2>
+        <div class="liste-demo">
+            <dl>
+                <dt>🐱 Chat</dt>
+                <dd>Animal à 4 pattes qui fait "Miaou !"</dd>
+                <dt>🐶 Chien</dt>
+                <dd>Animal à 4 pattes qui fait "Ouaf Ouaf !"</dd>
+                <dt>📐 Prof de maths</dt>
+                <dd>Personne qui enseigne des choses que personne ne comprend</dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- LISTE IMBRIQUÉE -->
+    <div class="carte">
+        <h2>Liste imbriquée</h2>
+        <div class="liste-demo">
+            <ul style="list-style-type:disc">
+                <li>Fruits rouges
+                    <ul style="list-style-type:circle">
+                        <li>Fraises</li>
+                        <li>Framboises</li>
+                        <li>Cerises</li>
+                    </ul>
+                </li>
+                <li>Ma journée
+                    <ol style="list-style-type:decimal">
+                        <li>Je me lève</li>
+                        <li>Je mange et je bois</li>
+                        <li>Je retourne me coucher</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
+

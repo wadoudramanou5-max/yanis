@@ -1,0 +1,123 @@
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Cercles décoratifs en arrière-plan */
+        .bg-cercle {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(200,168,75,0.05);
+            border: 1px solid rgba(200,168,75,0.08);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        .bg-cercle:nth-child(1) { width: 300px; height: 300px; top: -80px; right: -80px; }
+        .bg-cercle:nth-child(2) { width: 200px; height: 200px; bottom: -50px; left: -50px; animation-delay: 2s; }
+        .bg-cercle:nth-child(3) { width: 150px; height: 150px; top: 50%; left: 20%; animation-delay: 1s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 1; }
+        }
+
+        /* Carte centrale */
+        .carte {
+            text-align: center;
+            color: #ffffff;
+            z-index: 1;
+            padding: 40px;
+            animation: entree 1s ease;
+        }
+
+        @keyframes entree {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Icône principale */
+        .icone-principale {
+            font-size: 64px;
+            margin-bottom: 20px;
+            display: block;
+            animation: flotter 3s ease-in-out infinite;
+        }
+
+        @keyframes flotter {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #c8a84b;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .sous-titre {
+            font-size: 15px;
+            color: #b0c4de;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        /* Ligne décorative */
+        .ligne {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #c8a84b, transparent);
+            margin: 20px auto;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: rgba(200,168,75,0.08);
+            border: 1px solid rgba(200,168,75,0.2);
+            border-radius: 10px;
+            padding: 16px 24px;
+            min-width: 100px;
+        }
+
+        .stat .chiffre {
+            font-size: 28px;
+            font-weight: 700;
+            color: #c8a84b;
+            display: block;
+        }
+
+        .stat .label {
+            font-size: 11px;
+            color: #b0c4de;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Message d'instruction */
+        .instruction {
+            margin-top: 35px;
+            font-size: 13px;
+            color: rgba(176,196,222,0.7);
+            font-style: italic;
+            animation: clignoter 2s ease-in-out infinite;
+        }
+
+        @keyframes clignoter {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }

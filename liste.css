@@ -1,0 +1,111 @@
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 25px 20px;
+            color: #e0e8f5;
+        }
+        .page { max-width: 800px; margin: 0 auto; }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            padding-bottom: 14px;
+            border-bottom: 2px solid rgba(200,168,75,0.3);
+        }
+        .icone-page {
+            background: linear-gradient(135deg, #c8a84b, #f0d080);
+            color: #1a1a2e;
+            font-size: 26px;
+            width: 52px; height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .page-header h1 { font-size: 20px; color: #fff; }
+        .page-header .sous { font-size: 11px; color: #c8a84b; margin-top: 3px; }
+
+        .carte {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(200,168,75,0.2);
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 18px;
+        }
+        .carte h2 {
+            font-size: 13px;
+            color: #c8a84b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .carte h2::before {
+            content: '';
+            width: 3px; height: 16px;
+            background: #c8a84b;
+            border-radius: 2px;
+            display: block;
+        }
+
+        /* Grille de listes */
+        .grille-listes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .liste-demo {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(200,168,75,0.15);
+            border-radius: 8px;
+            padding: 14px 16px;
+        }
+
+        .liste-demo .type-label {
+            font-size: 10px;
+            color: #c8a84b;
+            background: rgba(200,168,75,0.15);
+            border: 1px solid rgba(200,168,75,0.3);
+            padding: 2px 8px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-family: monospace;
+        }
+
+        .liste-demo ul, .liste-demo ol, .liste-demo dl {
+            padding-left: 20px;
+            font-size: 13px;
+            color: #b0c4de;
+            line-height: 2;
+        }
+
+        .liste-demo dl { padding-left: 0; }
+
+        .liste-demo dt {
+            color: #c8a84b;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .liste-demo dd {
+            color: #b0c4de;
+            font-size: 12px;
+            padding-left: 16px;
+            margin-bottom: 4px;
+        }
+
+        .liste-demo ul[style*="none"] { list-style: none; padding-left: 0; }
+
+        @media (max-width: 500px) {
+            .grille-listes { grid-template-columns: 1fr; }
+        }
