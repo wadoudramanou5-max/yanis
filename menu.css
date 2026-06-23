@@ -104,3 +104,10 @@ h4{
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #1a1a2e; }
         ::-webkit-scrollbar-thumb { background: #c8a84b; border-radius: 5px; }
+/* ---- RESPONSIVE ---- */
+html { font-size: clamp(14px, 2.2vw, 17px); }
+img, table, iframe { max-width: 100%; height: auto; }
+@media (max-width: 600px) {
+    body { padding: 10px !important; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+}

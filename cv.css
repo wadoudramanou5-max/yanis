@@ -5,6 +5,7 @@
             background: #f4f6f9;
             color: #2c3e50;
             min-height: 100vh;
+            font-size: clamp(13px, 2.5vw, 16px);
         }
 
         /* ---- MISE EN PAGE PRINCIPALE ---- */
@@ -257,3 +258,55 @@
             color: #c8a84b;
             border-color: #c8a84b;
         }
+/* ---- RESPONSIVE MOBILE / TABLETTE ---- */
+@media (max-width: 900px) {
+    .cv-wrapper {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .col-gauche {
+        width: 100%;
+        min-width: 0;
+        padding: 25px 20px;
+    }
+    .col-droite {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    .cv-wrapper {
+        display: block;
+        width: 100%;
+    }
+    .col-gauche, .col-droite {
+        width: 100%;
+        padding: 20px 15px;
+    }
+    .avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 40px;
+    }
+    .nom h1 { font-size: clamp(18px, 5vw, 22px); }
+    .nom .poste { font-size: clamp(10px, 3vw, 12px); }
+    .section h2 { font-size: clamp(14px, 4vw, 17px); }
+    .section-gauche h3 { font-size: clamp(10px, 3vw, 12px); }
+    .item-timeline {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+    }
+    .annee {
+        min-width: 0;
+        align-self: flex-start;
+    }
+    .item-info h4 { font-size: clamp(13px, 3.8vw, 15px); }
+    .profil-texte { font-size: clamp(12px, 3.5vw, 14px); padding: 12px 14px; }
+    .interets { gap: 6px; }
+    .interet { font-size: clamp(11px, 3vw, 13px); padding: 5px 12px; }
+    .contact-item span:not(.ico) { word-break: break-word; }
+}

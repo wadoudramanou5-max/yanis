@@ -1,0 +1,11 @@
+html, body { height: 100%; margin: 0; padding: 0; }
+frameset { border: none; }
+frame { border: none; }
+
+/* ---- RESPONSIVE ---- */
+html { font-size: clamp(14px, 2.2vw, 17px); }
+img, table, iframe { max-width: 100%; height: auto; }
+@media (max-width: 600px) {
+    body { padding: 10px !important; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+}

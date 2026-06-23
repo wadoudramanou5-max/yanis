@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon Site - Version Responsive</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f4f6fb;color:#1a1a2e}
+    .app{display:grid;grid-template-rows:auto 1fr auto;height:100vh}
+    header.top{background:linear-gradient(135deg,#0f3460,#16213e);color:#fff;padding:14px 18px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+    header.top h1{font-size:1.15rem;font-weight:600;flex:1}
+    .burger{display:none;background:rgba(255,255,255,.15);border:0;color:#fff;width:42px;height:42px;border-radius:8px;font-size:22px;cursor:pointer}
+    .burger:hover{background:rgba(255,255,255,.25)}
+    main.body{display:grid;grid-template-columns:260px 1fr;min-height:0;overflow:hidden}
+    aside.menu{background:#fff;border-right:1px solid #e5e7eb;overflow-y:auto;padding:16px 10px}
+    .menu-title{font-size:.75rem;font-weight:700;text-transform:uppercase;color:#6b7280;padding:0 12px 10px;letter-spacing:.05em}
+    .menu a{display:flex;align-items:center;gap:10px;padding:10px 12px;margin:2px 0;border-radius:8px;color:#1a1a2e;text-decoration:none;font-size:.95rem;transition:background .15s}
+    .menu a:hover{background:#eef2ff}
+    .menu a.actif{background:#0f3460;color:#fff}
+    .menu .icone{font-size:1.1rem;width:24px;text-align:center}
+    .menu .label{flex:1}
+    .menu .badge{background:#e94560;color:#fff;font-size:.65rem;padding:2px 7px;border-radius:10px;font-weight:700}
+    .menu .sep{height:1px;background:#e5e7eb;margin:10px 8px}
+    .content{background:#fff;overflow:hidden;display:flex}
+    .content iframe{flex:1;border:0;width:100%;height:100%}
+    footer.bot{background:#16213e;color:#cbd5e1;text-align:center;padding:10px;font-size:.8rem}
+    .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:5}
+    @media (max-width:768px){
+      .burger{display:block}
+      main.body{grid-template-columns:1fr}
+      aside.menu{position:fixed;top:0;left:0;bottom:0;width:75%;max-width:280px;z-index:10;transform:translateX(-100%);transition:transform .25s ease;padding-top:70px;box-shadow:2px 0 12px rgba(0,0,0,.2)}
+      aside.menu.open{transform:translateX(0)}
+      .overlay.show{display:block}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="top">
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+      <h1>Mon Premier Site Web</h1>
+    </header>
+    <main class="body">
+      <aside class="menu" id="menu">
+        <div class="menu-title">Mon Menu</div>
+        <a href="Tp1.html" target="contenu" class="actif"><span class="icone">📘</span><span class="label">Tp1</span></a>
+        <a href="Tp2.html" target="contenu"><span class="icone">📗</span><span class="label">Tp2</span></a>
+        <a href="To3.html" target="contenu"><span class="icone">📙</span><span class="label">Tp3</span></a>
+        <a href="Tp4.html" target="contenu"><span class="icone">📕</span><span class="label">Tp4</span><span class="badge">NEW</span></a>
+        <div class="sep"></div>
+        <a href="liste.html" target="contenu"><span class="icone">📋</span><span class="label">Liste</span></a>
+        <a href="tableau.html" target="contenu"><span class="icone">📊</span><span class="label">Tableau</span></a>
+        <a href="formulaire.html" target="contenu"><span class="icone">📝</span><span class="label">Formulaire</span></a>
+        <div class="sep"></div>
+        <a href="cv.html" target="contenu"><span class="icone">👤</span><span class="label">Mon CV</span></a>
+      </aside>
+      <div class="overlay" id="overlay"></div>
+      <section class="content">
+        <iframe name="contenu" src="acc.html" title="Contenu"></iframe>
+      </section>
+    </main>
+    <footer class="bot">© 2026 - Mon Premier Site Web</footer>
+  </div>
+  <script>
+    const burger=document.getElementById('burger'),menu=document.getElementById('menu'),overlay=document.getElementById('overlay');
+    function toggle(){menu.classList.toggle('open');overlay.classList.toggle('show')}
+    burger.addEventListener('click',toggle);
+    overlay.addEventListener('click',toggle);
+    menu.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click',()=>{
+        menu.querySelectorAll('a').forEach(x=>x.classList.remove('actif'));
+        a.classList.add('actif');
+        if(window.innerWidth<=768)toggle();
+      });
+    });
+  </script>
+</body>
+</html>

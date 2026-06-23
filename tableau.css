@@ -83,3 +83,10 @@
         .bleu { background: rgba(91,163,245,0.15) !important; color: #5ba3f5 !important; }
         .or { background: rgba(200,168,75,0.15) !important; color: #c8a84b !important; }
         .vert { background: rgba(100,200,100,0.15) !important; color: #90ee90 !important; }
+/* ---- RESPONSIVE ---- */
+html { font-size: clamp(14px, 2.2vw, 17px); }
+img, table, iframe { max-width: 100%; height: auto; }
+@media (max-width: 600px) {
+    body { padding: 10px !important; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+}
